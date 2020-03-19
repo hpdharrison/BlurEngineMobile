@@ -1,10 +1,10 @@
 #include <jni.h>
 #include <string>
+#include "native-lib.hpp"
 
 extern "C" JNIEXPORT jstring JNICALL
 Java_com_qprogramming_blurenginemobile_MainActivity_stringFromJNI(
         JNIEnv* env,
         jclass javaclass) {
-    std::string hello = "Hello from C++";
-    return env->NewStringUTF(hello.c_str());
+    return env->NewStringUTF(DEFINED_TEXT.c_str());
 }
